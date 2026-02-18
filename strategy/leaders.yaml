@@ -1,0 +1,143 @@
+leaders_overview:
+  note: >
+    New Leaders & Wonders expansion adds 24 new leaders (6 per age).
+    Leader choice is one of the most impactful decisions in each age.
+  general_principle: >
+    Pick the leader that amplifies your current strategic path, not the
+    most famous name. The strongest leader is the one whose ability
+    synergizes with what you are already doing.
+  upgrade_cost: "Upgrading to a new leader costs 1 civil action"
+  upgrade_timing: >
+    Time upgrades so that the leader's benefit starts to matter immediately
+    after you take them. Taking Napoleon at the start of Age III when you
+    plan a mid-Age III military push is optimal; taking him with 2 rounds left
+    is wasteful.
+  signaling_risk: >
+    Some leaders signal your intent clearly to opponents, giving them time
+    to counter. Factor this into your pick.
+
+age_i_leaders:
+  moses:
+    strength: "Colonization and early religious culture generation"
+    best_pairing: "Early expansion, colony-focused build with military actions to exploit"
+    threat_level: low
+    notes: "Does not signal military intent; safe pick in escalation-heavy games"
+
+  hammurabi:
+    strength: "Law-based civil efficiency improvements"
+    best_pairing: "Civil action acceleration builds in Age I"
+    threat_level: low
+    notes: "Good for CA-focused openers"
+
+  ramesses:
+    strength: "Wonder construction acceleration"
+    best_pairing: "Age I wonder rush when you have strong production"
+    threat_level: low
+
+age_ii_leaders:
+  caesar:
+    strength: "Military and production efficiency hybrid"
+    best_pairing: "Mixed military-economy build; flexible"
+    threat_level: medium
+    notes: >
+      Strong fallback if top military leaders are unavailable.
+      Signals moderate military intent without committing you to full aggression.
+
+  alexander:
+    strength: "Military expansion and colonization"
+    best_pairing: "Aggressive early Age II military build"
+    threat_level: high
+    notes: >
+      Signals aggressive intent to all opponents. In your 4-player
+      escalation-heavy group, picking Alexander may cause all three
+      opponents to escalate preemptively against you.
+    warning: "High signaling risk in groups that respond to military signals"
+
+  constantine:
+    strength: "Religious culture production"
+    best_pairing: "Culture engine build in Age II"
+    threat_level: low
+    notes: >
+      Low military threat; makes you a culture target. Only viable if
+      you establish military credibility independently or opponents are
+      fighting each other.
+
+age_iii_leaders:
+  napoleon:
+    strength: "Late-game military dominance — best military multiplier in the game"
+    best_pairing: "Age III military push with Air Force + War for Culture"
+    threat_level: very_high
+    signaling: "Signals decisive late aggression to everyone at the table"
+    tactical_use: >
+      Take only if you are planning a concrete Age III military action.
+      If opponents see you take Napoleon and they can preemptively
+      outbuild you in Air Force, you have wasted the pick.
+    condition_for_success: >
+      You have more science production than opponents (enabling faster
+      Air Force upgrade) OR you take Napoleon exactly when you are
+      ready to execute the military action, not turns beforehand.
+
+  genghis_khan:
+    strength: "Early-mid aggressive raiding with cavalry; strong with Tactics"
+    best_pairing: "Tactics + Knights combo in Ages I-II"
+    threat_level: very_high
+    signaling: "Immediately signals aggressor role to all opponents"
+    tactical_use: >
+      Strong if you plan to be the initiating aggressor in the arms race.
+      Extremely risky in 4-player where all three opponents will
+      counter-build. In your specific group's escalation dynamic,
+      this leader likely triggers the exact arms race you want to avoid.
+    warning: "In 4-player escalation groups: high risk of triggering group response"
+
+  shakespeare:
+    strength: "Exceptional culture rate — best cultural multiplier in the game"
+    best_pairing: "Dedicated culture engine with pre-established military deterrence"
+    threat_level: near_zero
+    signaling: "Makes you THE culture target at the table"
+    tactical_use: >
+      Extremely powerful but requires specific conditions to work:
+      1. You have already established military credibility (opponents are
+         occupied fighting each other), OR
+      2. You accept that you will be a raid target and have built enough
+         military to absorb one attack, OR
+      3. You are far enough ahead in culture that opponents cannot catch
+         up even with successful raids against you.
+    warning: >
+      In your specific 4-player escalation group: risky unless
+      opponents are demonstrably busy attacking each other and not you.
+      Consider whether picking Shakespeare will unify your opponents
+      against you.
+
+  darwin:
+    strength: "Science and technology acceleration"
+    best_pairing: "Science rush → Age III technology dominance including military"
+    threat_level: low_direct
+    notes: >
+      Low direct military threat but enables future military power via
+      technology advantage. Strong in games where you want to match
+      militarists in Age III without having escalated earlier.
+
+  columbus:
+    strength: "Colonial expansion engine"
+    best_pairing: "Extra Military Actions into colony exploitation"
+    threat_level: medium
+    notes: "Requires Military Actions but not direct combat; moderate threat signal"
+
+  newton:
+    strength: "Strongest science leader in the game"
+    best_pairing: "Science-heavy builds → technology advantage"
+    threat_level: low
+    notes: >
+      Low direct threat. Long-term enables military via science,
+      but opponents rarely perceive this as threatening until Age III.
+
+leadership_meta_notes:
+  adaptive_leader_choice: >
+    Choosing a leader is itself an adaptive decision. Assess what your
+    current strategy needs most, what signals are safe to send to opponents,
+    and what the leader's ability will be worth given the number of rounds
+    remaining in the age.
+  upgrade_vs_hold: >
+    Sometimes holding your current leader for one more round (to get more
+    value from their ability before upgrading) is better than immediately
+    taking the next age's best leader. Time the upgrade for maximum overlap.

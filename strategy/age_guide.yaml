@@ -1,0 +1,180 @@
+age_guide:
+
+  age_i:
+    theme: "Foundation — establish the engine that will power Ages II and III"
+    core_question: "Am I building the machine, or falling behind on it?"
+
+    priorities:
+      - rank: 1
+        action: "Acquire 5th Civil Action"
+        rationale: >
+          The single highest-ROI action in the game. Each additional civil action
+          compounds through every remaining round — more cards drafted, more
+          buildings built, faster wonder construction, more military options.
+          Players who end Age I with only 4 civil actions are structurally behind
+          in card draw for the rest of the game.
+        how: ["Code of Laws (gives 2 CAs)", "Aristocracy", "Philosophy"]
+        urgency: "Critical — if you reach Age II with only 4 CA, catching up is very costly"
+
+      - rank: 2
+        action: "Establish 3+ science production per turn"
+        rationale: >
+          Science cannot be overproduced. Three science per turn guarantees
+          you can afford Age II technology upgrades without starving other
+          resources. Science building in Age I is the investment that pays off
+          in Age II and III through better technology.
+        how: ["Library", "Alchemy", "Observatory"]
+        urgency: "Must have by end of Age I — missing Age II upgrades is a permanent setback"
+
+      - rank: 3
+        action: "Build 1-2 military units (Swordsmen preferred)"
+        rationale: >
+          Minimum viable military. Swordsmen give the best punch-per-resource
+          in Age I. One or two units plus a Tactics card is often sufficient
+          deterrence. Do not build more — additional units cost civil actions
+          that should go to CA and science.
+        urgency: "Before the first military event; do not delay past mid-Age I"
+        target: "Military strength within 2 of the strongest opponent"
+
+      - rank: 4
+        action: "Bronze Age infrastructure (Farms and Mines)"
+        rationale: >
+          Food enables workers; workers enable production capacity; production
+          capacity enables everything else. Get food and ore production online
+          early enough to fund Age II buildings and wonders.
+        target: "4-5 food production and 3-4 ore production by end of Age I"
+
+      - rank: 5
+        action: "Draft Warfare card if below 3 Military Actions"
+        rationale: "Three Military Actions enables better card cycling and military flexibility."
+        condition: "Only if Warfare appears in the card row and you are at 2 MAs"
+
+    danger_signals:
+      - "Ending Age I with only 4 civil actions (structural card draw deficit going forward)"
+      - "No science building constructed (will miss key Age II upgrades)"
+      - "Military strength more than 3 below any single opponent (raid target)"
+      - "Fewer than 3 food production at Age I end (worker bottleneck)"
+      - "Zero culture production buildings (no culture snowball started)"
+
+    age_i_traps:
+      over_militarizing: >
+        Spending more than 2 civil actions on military in Age I is usually wrong.
+        The arms race starts here, but joining it fully sacrifices CA and science
+        that cannot be recovered.
+      under_militarizing: >
+        Zero military in Age I invites a raid that can cost 5-10 culture points
+        plus set your military recovery back 2 rounds.
+
+  age_ii:
+    theme: "Acceleration — amplify your Age I engine and establish culture production"
+    core_question: "Am I converting my engine advantage into culture points?"
+
+    priorities:
+      - rank: 1
+        action: "Add 1-2 more Civil Actions (target 6 total)"
+        rationale: >
+          Six civil actions per round is the threshold where you can do meaningful
+          work every turn without running dry. Players with 6 CA can draft, build,
+          AND maintain military simultaneously.
+        how: ["Philosophy", "Code of Laws (if still available)", "Printing Press (double duty: CA + science)"]
+
+      - rank: 2
+        action: "Upgrade military to Knights or Chivalry"
+        rationale: >
+          Knights are the most cost-efficient military unit for Age II.
+          Upgrading to Chivalry before the first Age II military event is
+          essential for maintaining the hair's breadth military threshold.
+        condition: "Complete this before the first Age II military event fires"
+
+      - rank: 3
+        action: "Build 1-2 Age II wonders"
+        rationale: >
+          Age II wonders provide points and unique abilities, and their
+          construction cost is manageable with a working Age I economy.
+          They are the most reliably completable wonders in the game.
+        timing: "Start early enough in Age II to complete before Age III begins"
+
+      - rank: 4
+        action: "Establish strong culture production (5+ per turn)"
+        rationale: >
+          Culture production in Age II snowballs into a significant lead by
+          game end. A player producing 7 culture per turn in Age II will be
+          far ahead of one who only starts culture production in Age III.
+        how: ["Drama", "Renaissance", "any strong blue culture building"]
+
+      - rank: 5
+        action: "Maintain military within hair's breadth"
+        rationale: "Never let the military gap exceed 2 vs. the nearest aggressor."
+
+    key_cards_to_prioritize:
+      - card: "Code of Laws"
+        why: "If unbuilt from Age I, still the highest ROI pick early Age II"
+      - card: "Drama / Renaissance"
+        why: "Core culture engines; take one if available"
+      - card: "Strong Tactics card"
+        why: "Multiplies existing military without burning ore on new units"
+      - card: "Printing Press / Library"
+        why: "Science + sometimes CA; dual value"
+
+    danger_signals:
+      - "Stuck at 5 civil actions with no path to 6th (permanent card draw bottleneck)"
+      - "No culture production building by mid-Age II (will lose culture race)"
+      - "Military gap greater than 2 from any opponent entering Age III"
+      - "No Age II wonder started by mid-Age II (will miss the point injection)"
+
+  age_iii:
+    theme: "Endgame — maximize culture points; military only if it creates a game-winning swing"
+    core_question: "What is the shortest path to the highest culture score at game end?"
+
+    priorities:
+      - rank: 1
+        action: "Upgrade to Air Force only if executing a decisive military strategy"
+        rationale: >
+          Air Force is decisive in Age III, but building it costs civil actions
+          that could generate culture. Only worthwhile if you plan a War for
+          Culture or have a clear military victory path.
+        condition: "Have a concrete plan for using military dominance to swing the game"
+
+      - rank: 2
+        action: "Complete exactly one Age III wonder"
+        rationale: >
+          Age III wonders provide massive point injections for the endgame —
+          often 15-25+ points. One is reliably completable; two requires
+          an exceptional production engine.
+        warning: >
+          Do not start an Age III wonder you cannot complete. An incomplete
+          wonder costs you the production investment and returns nothing.
+        timing: "Start early Age III; complete mid-to-late Age III"
+
+      - rank: 3
+        action: "Maximize culture production rate"
+        rationale: >
+          All culture buildings, event bonuses, and production multipliers
+          culminate here. Every additional culture per turn in Age III
+          translates directly to final victory points.
+
+      - rank: 4
+        action: "Political leverage via military threat"
+        rationale: >
+          Use credible military positioning to extract favorable event outcomes
+          without actually fighting. The threat is often more valuable than
+          the execution.
+
+    age_iii_trap:
+      name: "The Incomplete Wonder"
+      description: >
+        Starting an Age III wonder in the last 2-3 rounds of the game and
+        failing to complete it.
+      cost: "You lose all production investment with zero point return."
+      check: >
+        Before starting any wonder: stages_remaining × ore_per_stage
+        must be ≤ remaining_rounds × your_ore_production.
+
+    science_payoff:
+      description: >
+        Players who invested heavily in science in Ages I-II can upgrade to
+        modern military in Age III while maintaining a strong economy.
+      implication: >
+        High science + high economy players can match mid-game militarists
+        in Age III without having joined the escalation earlier. This is
+        the long-term payoff of the adaptive strategy.

@@ -1,0 +1,135 @@
+card_draft_priority:
+
+  framework:
+    description: >
+      When multiple cards are available and you can only take one, use this
+      hierarchy. Context always overrides tiers — a Tier 2 card that directly
+      solves a critical gap beats a Tier 1 card you don't need.
+    key_principle: >
+      Every card costs a civil action to draft (and usually more to build).
+      The question is always: "What is the highest expected value use of
+      this civil action given my current gaps?"
+
+  tier_1:
+    label: "Always Consider First"
+    description: >
+      If these are available AND you are deficient in the corresponding area,
+      these beat almost everything else.
+
+    civil_actions:
+      examples: ["Code of Laws", "Aristocracy", "Philosophy", "Printing Press"]
+      condition: "You have fewer than 6 Civil Actions"
+      rationale: >
+        Civil actions are the engine behind every other action. Each CA
+        you add is worth roughly 1 full extra action per round for the
+        rest of the game. This compounds enormously.
+      priority: "Highest possible priority if you are below 6 CA"
+      special_note: >
+        Code of Laws gives 2 CAs for one draft slot. It is the most
+        efficient CA-acquisition card in the game.
+
+    military_actions:
+      examples: ["Warfare", "Military Action cards"]
+      condition: "You have fewer than 3 Military Actions"
+      rationale: >
+        Three Military Actions is the minimum for competitive card cycling.
+        Below 3, you are constrained in your military response options.
+
+    science_buildings:
+      examples: ["Library", "Alchemy", "Observatory", "any science building"]
+      condition: "You produce fewer than 3 science per turn"
+      rationale: >
+        Science cannot be overproduced. Missing science production in Age I
+        means missing technology upgrades in Age II — a permanent setback.
+      priority: "Competes with CA for top priority; both are foundational"
+
+  tier_2:
+    label: "Strong Situational Pickups"
+    description: "Take these when Tier 1 needs are met or when the Tier 1 options are unavailable."
+
+    military_units:
+      examples: ["Swordsmen", "Knights", "Chivalry", "Air Force"]
+      condition: "You are at or below your military threshold (within 2 of opponents)"
+      best: >
+        Knights and Swordsmen are optimal for Ages I-II — best punch
+        per ore and per civil action. Do not upgrade past Age-appropriate units
+        just because an Age III unit is visible.
+
+    tactics_cards:
+      examples: ["Any Tactics card"]
+      rationale: >
+        A single Tactics card can increase effective military strength by
+        30-50% without spending ore on new units. This is frequently the
+        highest-efficiency military investment available.
+      note: >
+        Often better than buying a new unit when you already have some
+        military base to multiply.
+
+    culture_engines:
+      examples: ["Drama", "Shakespeare's plays", "Renaissance", "Colosseum"]
+      condition: "Your culture production is below 5 per turn by mid-Age II"
+      rationale: "Culture production compounds; every point per turn matters at game end"
+
+    wonder_enablers:
+      description: "Cards that synergize with your active wonder construction"
+      condition: "You have a wonder in progress and the card accelerates completion"
+
+  tier_3:
+    label: "Good but Situational"
+
+    economic_upgrades:
+      examples: ["Iron Age Farms", "Iron Age Mines", "advanced food/ore buildings"]
+      note: "Good early; diminishing returns in Age III when time horizon is short"
+      condition: >
+        Take if you are worker-bottlenecked (food production limiting
+        worker count limiting production rate).
+
+    colonies:
+      rationale: "Strong if you have Military Actions to spare and colony reward is favorable"
+      condition: "Only worthwhile with 3+ Military Actions and no active military crisis"
+
+    leader_upgrades:
+      note: >
+        Depends heavily on current leader synergies and what abilities
+        the new leader provides.
+
+  tier_4:
+    label: "Denial Picks"
+    description: >
+      Take a card an opponent needs even if it is suboptimal for you.
+      Only valid when you are in a position to absorb a suboptimal pick.
+
+    conditions:
+      - "You are in a strong position and can afford a suboptimal civil action"
+      - "The card would directly power a threatening opponent's strategy"
+
+    priority_denial_targets:
+      - "Powerful military cards when an aggressive opponent is currently weak in military"
+      - "Strong culture cards when a culture-leading opponent is pulling away"
+      - "Civil Action cards when you are already at 6 CA — deny it rather than let opponents get 6 CA"
+      - "Key Tactics cards when an opponent has built up many units"
+
+  draft_order_awareness:
+    late_draft_position:
+      description: "Going last in draft means fewer options but better reactive picks"
+      strategy: >
+        Prioritize denial and reactive picks. Take what opponents left rather
+        than chasing a pre-planned build order.
+
+    early_draft_position:
+      description: "Going first means best card, but opponents react to your picks"
+      strategy: >
+        Be unpredictable. Do not always signal your strategy with predictable
+        first picks. Mixing in denial or off-strategy picks occasionally keeps
+        opponents guessing.
+
+  four_player_card_economy:
+    description: >
+      In 4-player games, the card row depletes faster than in 2-player games.
+      Valuable cards frequently disappear in one round.
+    implication: >
+      Do not assume a strong card will still be available next round.
+      If you can take it now and afford the civil action cost, do so.
+    exception: >
+      Age I cards become obsolete quickly in Age II. Do not over-invest
+      in Age I cards late in Age I when Age II cards are about to arrive.

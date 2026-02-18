@@ -1,0 +1,124 @@
+military_strategy:
+
+  core_principle:
+    rule: "The 'Hair's Breadth' Rule"
+    description: >
+      You do not need to lead in military. You do not even need to be second.
+      What you need is to be close enough that attacking you costs the attacker
+      more than the attack is worth.
+    target_differential:
+      max_acceptable_gap: 2
+      unit: "military strength points behind nearest likely aggressor"
+      rationale: >
+        A gap greater than 2 makes you an attractive raid target.
+        A gap of 0-2 means aggression costs the attacker a civil action plus
+        a war card burn with uncertain reward — most rational opponents will
+        look for easier targets.
+
+  escalation_drain:
+    description: >
+      When three or more players simultaneously escalate military against each
+      other, each one drains civil actions into military that should go to
+      food → workers → production → science → culture.
+    implication: >
+      The player who understands the minimum viable military threshold wins by
+      out-producing escalating opponents. Every civil action your opponent
+      spends on a military unit beyond what's needed is a civil action not
+      spent on the things that win games.
+    your_goal: >
+      Be the one player NOT in the escalation loop. Let opponents police each
+      other's military while you accumulate culture production advantage.
+
+  four_player_specific:
+    group_dynamics: >
+      In 4-player games, three opponents collectively police each other's
+      military. You benefit from this dynamic — they are watching each other
+      more than they are watching you, provided you are not visibly weak.
+    coordination_trap: >
+      If all three opponents escalate, they each weaken their own economy.
+      This is their mistake, not yours. Do not join the escalation; profit from it.
+    targeting_logic: >
+      You become a target when you look 'safe': low military, high visible
+      culture score. Counter this by keeping military credible (within
+      hair's breadth), not by leading it.
+
+  posture_types:
+    raid:
+      when_to_use: >
+        You have a clear military lead AND an opponent has culture production
+        significantly higher than yours, making the game a culture race you
+        are losing.
+      rationale: >
+        A War for Culture creates roughly a 60-point swing. This is worth
+        the civil action cost ONLY when it changes the game outcome.
+      risk: "Escalates the arms race; signals you as an aggressor; use sparingly"
+      rule_of_thumb: "Raid to change losing trajectories, not to stay ahead"
+
+    threaten:
+      when_to_use: >
+        You are within 2 of opponents but not leading. You want to deter
+        attacks without spending additional civil actions on military.
+      how: >
+        Draft a Warfare or Tactics card visibly. Build one unit as a signal.
+        The threat of retaliation is often sufficient.
+      rationale: "Credible threat without actual aggression preserves civil actions for economy"
+
+    ignore:
+      when_to_use: >
+        Military competition is fierce and balanced among three or more players;
+        you are not the weakest player militarily.
+      rationale: >
+        Let others exhaust civil actions on military while you build economy
+        and culture production.
+      risk: >
+        Must maintain enough military that ignoring further escalation does NOT
+        make you the easiest target. You can only ignore if you are within
+        hair's breadth.
+
+  counter_escalation:
+    when_you_are_targeted:
+      - "Buy one military card immediately — not to win the arms race, but to raise cost of attacking you"
+      - "Draft the best available Tactics card (multiplies existing units; often better than more units)"
+      - "Signal retaliatory intent: opponents must believe attacking you will cost them"
+
+    age_iii_inflection:
+      description: >
+        By late Age II / early Age III, Air Force replaces earlier units as the
+        dominant force multiplier. The player who upgrades first gains decisive
+        military advantage.
+      key_insight: >
+        Science and economy are the TRUE foundations of Age III military power —
+        not early unit purchases. A player who invested in science in Ages I-II
+        can match mid-game militarists in Age III without having escalated earlier.
+      implication: >
+        Building science early is also building future military capability.
+        This is a key argument against joining the escalation loop in Age I-II.
+
+  unit_efficiency:
+    age_i_ii:
+      best_units: ["Swordsmen", "Knights"]
+      rationale: >
+        Knights and Swordsmen are the most cost-efficient military units for
+        Ages I through II — best punch per resource and per civil action.
+
+    age_iii:
+      best_units: ["Air Force"]
+      rationale: >
+        Air Force is the decisive endgame unit. Building it requires
+        science investment from earlier ages.
+
+    tactics_cards:
+      value: >
+        A single Tactics card can increase effective military power by 30-50%
+        without spending ore on new units. Tactics cards are often the
+        highest-efficiency military investment available.
+
+  war_for_culture:
+    description: "Military aggression combined with War for Culture creates a ~60-point swing"
+    calculation: >
+      You gain culture points equal to your military lead; opponent loses the
+      same. Net swing is roughly double your military advantage.
+    when_optimal: >
+      Only optimal when you are BOTH: (1) winning the military race AND
+      (2) losing the culture production race. Using it otherwise wastes the
+      civil action and the war card.

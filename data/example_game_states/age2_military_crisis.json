@@ -1,0 +1,52 @@
+{
+  "_comment": "Age II military crisis. You have Shakespeare (culture leader) but opponent 1 has 16 strength vs your 10 — a gap of 6, well above the safe threshold of 2. A military event is next. Test: the coach should recommend Knights or Tactics over Drama despite your culture focus.",
+  "meta": {
+    "age": 2,
+    "round": 2,
+    "player_count": 4
+  },
+  "player": {
+    "civil_actions": 5,
+    "military_actions": 3,
+    "food_production": 9,
+    "ore_production": 7,
+    "science_production": 5,
+    "culture_production": 8,
+    "military_strength": 10,
+    "culture_points": 28,
+    "wonders_complete": ["Pyramids"],
+    "wonders_in_progress": [],
+    "leader": "Shakespeare",
+    "hand_cards": ["Drama"],
+    "technologies": ["Chivalry", "Printing Press", "Philosophy"]
+  },
+  "opponents": [
+    {
+      "id": "opponent_1",
+      "military_strength": 16,
+      "culture_production_estimate": 5,
+      "culture_points_estimate": 22,
+      "_note": "Aggressive player — the most dangerous; likely to attack next turn"
+    },
+    {
+      "id": "opponent_2",
+      "military_strength": 12,
+      "culture_production_estimate": 6,
+      "culture_points_estimate": 25
+    },
+    {
+      "id": "opponent_3",
+      "military_strength": 11,
+      "culture_production_estimate": 4,
+      "culture_points_estimate": 18
+    }
+  ],
+  "card_row": {
+    "age_1_cards": [],
+    "age_2_cards": ["Knights", "Tactics", "Code of Laws", "Alchemy"],
+    "age_3_cards": []
+  },
+  "events": {
+    "next_visible": "Military Dominance"
+  }
+}

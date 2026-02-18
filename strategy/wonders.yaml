@@ -1,0 +1,127 @@
+wonders_overview:
+  description: >
+    Wonders are constructed over multiple turns. Each stage costs production
+    resources (ore). Points and special abilities activate only on completion.
+    An incomplete wonder at game end returns nothing.
+
+  construction_rule: >
+    Before starting any wonder, calculate whether you can complete it
+    given remaining rounds and your ore production rate.
+    Formula: stages_remaining × ore_per_stage ≤ remaining_rounds × ore_production
+
+  games_per_wonder:
+    age_i: "1 Age I wonder is common; more is possible with fast starts and strong production"
+    age_ii: "1-2 Age II wonders is standard for a well-functioning game"
+    age_iii: "1 Age III wonder per game per player — 2 requires exceptional production economy"
+
+wonder_strategy:
+  commitment_rule:
+    description: "Never start a wonder you cannot complete before Age changes or game end."
+    cost_of_failure: >
+      You spend civil actions drafting and initiating, production resources
+      on partial stages, and receive zero points and zero ability activation.
+    check: "Count remaining rounds × ore production rate vs. total ore cost remaining"
+
+  age_iii_warning:
+    description: "Do not start an Age III wonder in the last 2-3 rounds of the age."
+    typical_timing: "Start Age III wonder in early Age III; aim to complete mid-to-late Age III"
+    if_behind_on_points: >
+      A completed Age III wonder can recover 15-25+ points. If you are
+      behind on culture points entering Age III, completing an Age III
+      wonder should be a top priority — but only if you can actually finish it.
+
+  abort_condition: >
+    If you are 2+ stages from completion with 2 rounds left in an age
+    and cannot possibly complete it, redirect ore production elsewhere.
+    Sunk cost is sunk — do not compound the mistake.
+
+  wonder_vs_building:
+    comparison: >
+      Wonders typically provide points + unique special abilities.
+      Buildings provide ongoing production bonuses.
+    when_to_prefer_wonder: >
+      When the wonder's ability directly synergizes with your current
+      strategy AND you can complete it efficiently.
+    when_to_prefer_building: >
+      When your production is too low to complete the wonder cleanly,
+      or when the building provides an ongoing bonus that compounds
+      more than the wonder's point injection.
+
+notable_wonders:
+  age_i:
+    pyramids:
+      effect: "Draw yellow (civil) cards for free — reduces civil action cost of drafting"
+      strategic_value: >
+        Strong for civil action conservation and card draw acceleration.
+        Pairs well with CA-hungry early builds.
+      when_to_build: "Early Age I if you can complete it before Age I ends"
+
+    colosseum_age_i:
+      note: "Age I small wonders vary by edition; check your card for specific effects"
+
+  age_ii:
+    hanging_gardens:
+      effect: "Bonus food production — accelerates your worker engine"
+      strategic_value: "Amplifies production economy; frees food for more workers"
+      pairing: "Best with production-heavy builds that need more workers"
+
+    st_peters_cathedral:
+      effect: "Bonus culture and happiness"
+      strategic_value: "Solid culture production boost"
+
+    general_age_ii:
+      note: >
+        Age II wonders are the sweet spot — completion is realistic with a
+        working economy, and their abilities activate early enough to matter.
+        Prioritize Age II wonders over immediately rushing an Age III wonder.
+
+  age_iii:
+    general:
+      strategic_consideration: >
+        The key question for any Age III wonder: does this wonder's ability
+        benefit my current strategy, or am I building it only for points?
+        Building purely for points is valid in Age III if production is
+        strong and completion is guaranteed.
+      timing_critical: >
+        Age III wonders are expensive. Starting too late means failing to
+        complete — which is catastrophically wasteful. Plan the Age III
+        wonder from mid-Age II.
+
+  expansion_wonders:
+    silk_road:
+      source: "New Leaders & Wonders expansion"
+      effect: "Economic trade and resource generation flexibility"
+      strategic_value: "Strong for production-heavy builds needing resource flexibility"
+      when_optimal: "When ore or food is a bottleneck and you have the civil actions to exploit trade routes"
+
+    red_cross:
+      source: "New Leaders & Wonders expansion"
+      effect: "Military recovery and defensive ability"
+      strategic_value: "Useful in heavy-military games for absorbing raid consequences"
+      when_optimal: "When you have taken a military hit or anticipate incoming aggression"
+
+    colosseum:
+      source: "Base game / expansion variant"
+      effect: "Culture points and happiness bonus"
+      strategic_value: "Reliable culture engine wonder; good in culture-focused strategies"
+
+wonder_timing_heuristic:
+  formula: "stages_remaining × ore_per_stage ≤ remaining_rounds × ore_production_per_round"
+  rule_of_thumb: >
+    If you cannot complete the wonder in the current age, either start it
+    very early in the next age, or do not start it at all.
+  example: >
+    Age III wonder costs 4 ore per stage with 3 stages remaining.
+    You produce 5 ore/round. You need 12 ore / 5 per round = 2.4 rounds minimum.
+    If 3+ rounds remain in Age III: safe to start.
+    If 2 rounds remain: too risky — do not start.
+
+competitive_wonder_notes:
+  signaling: >
+    Building a powerful culture wonder (Shakespeare's theater, etc.) signals
+    your culture focus to opponents and may draw military attention.
+    Have a military response plan ready before completing such a wonder.
+  wonder_race: >
+    In 4-player games, multiple players often want the same limited-supply
+    wonders. Track which wonders opponents are building and plan alternatives
+    to avoid competing for a wonder that will be finished by another player first.

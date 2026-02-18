@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(winget install:*)",
+      "Bash(py -3.12 -m pip install:*)",
+      "Bash(cmd /c:*)",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}

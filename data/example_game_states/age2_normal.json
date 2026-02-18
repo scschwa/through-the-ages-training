@@ -1,0 +1,51 @@
+{
+  "_comment": "Balanced mid-Age II state. You have 5 civil actions, good production, reasonable military. Card row has Code of Laws (6th CA) and Shakespeare (strong culture leader). Interesting tension: 6th CA vs Shakespeare vs Tactics. Test: the coach should weigh the 6th CA against closing the small military gap.",
+  "meta": {
+    "age": 2,
+    "round": 4,
+    "player_count": 4
+  },
+  "player": {
+    "civil_actions": 5,
+    "military_actions": 3,
+    "food_production": 8,
+    "ore_production": 6,
+    "science_production": 4,
+    "culture_production": 7,
+    "military_strength": 12,
+    "culture_points": 34,
+    "wonders_complete": ["Hanging Gardens"],
+    "wonders_in_progress": [],
+    "leader": "Caesar",
+    "hand_cards": ["Code of Laws", "Drama"],
+    "technologies": ["Chivalry", "Printing Press"]
+  },
+  "opponents": [
+    {
+      "id": "opponent_1",
+      "military_strength": 14,
+      "culture_production_estimate": 5,
+      "culture_points_estimate": 28
+    },
+    {
+      "id": "opponent_2",
+      "military_strength": 11,
+      "culture_production_estimate": 7,
+      "culture_points_estimate": 32
+    },
+    {
+      "id": "opponent_3",
+      "military_strength": 13,
+      "culture_production_estimate": 4,
+      "culture_points_estimate": 20
+    }
+  ],
+  "card_row": {
+    "age_1_cards": [],
+    "age_2_cards": ["Philosophy", "Tactics", "Aqueduct", "Shakespeare"],
+    "age_3_cards": []
+  },
+  "events": {
+    "next_visible": "Exploration"
+  }
+}
