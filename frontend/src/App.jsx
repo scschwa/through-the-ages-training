@@ -66,6 +66,30 @@ const DEFAULT_FORM = {
   next_event: '',
 }
 
+// ── Image resizing ─────────────────────────────────────────────────────────
+
+/**
+ * Resize + compress an image data URL to stay under Anthropic's 5MB limit.
+ * Returns a JPEG data URL at the given max width and quality.
+ */
+const resizeImage = (dataUrl, maxWidth = 1920, quality = 0.82) =>
+  new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => {
+      let { width, height } = img
+      if (width > maxWidth) {
+        height = Math.round(height * maxWidth / width)
+        width = maxWidth
+      }
+      const canvas = document.createElement('canvas')
+      canvas.width = width
+      canvas.height = height
+      canvas.getContext('2d').drawImage(img, 0, 0, width, height)
+      resolve(canvas.toDataURL('image/jpeg', quality))
+    }
+    img.src = dataUrl
+  })
+
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 const parseList = (text) =>
@@ -226,8 +250,8 @@ export default function App() {
     setParsing(true)
     setParseNotes('')
     setParseError('')
-    const [header, base64] = dataUrl.split(',')
-    const mediaType = header.match(/data:([^;]+)/)?.[1] || 'image/png'
+    const [, base64] = dataUrl.split(',')
+    const mediaType = 'image/jpeg'   // resizeImage always produces JPEG
     try {
       const res = await fetch('/api/parse-screenshot', {
         method: 'POST',
@@ -248,9 +272,10 @@ export default function App() {
     }
   }, [populateFormFromGameState])
 
-  const handleImageData = useCallback((dataUrl) => {
-    setScreenshot(dataUrl)
-    parseScreenshotData(dataUrl)
+  const handleImageData = useCallback(async (dataUrl) => {
+    setScreenshot(dataUrl)              // show original as preview immediately
+    const compressed = await resizeImage(dataUrl)  // resize before sending to API
+    parseScreenshotData(compressed)
   }, [parseScreenshotData])
 
   // Ctrl+V paste anywhere on the page
